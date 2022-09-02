@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body class="bg-indigo-400">
+    <div
+      class="w-96 h-screen mx-auto flex flex-col items-center justify-center gap-4"
+    >
+      <h1 class="text-2xl underline">Registration Form</h1>
+      <p>Please fill out this form with the required information</p>
+
+      <form action="https://register-demo.freecodecamp.org">
+        <fieldset class="text-xl flex flex-col gap-4 text-center">
+          <label
+            >Enter Your First Name:
+            <input type="text" name="first-name" required
+          /></label>
+          <label
+            >Enter Your Last Name: <input type="text" name="last-name" required
+          /></label>
+          <label
+            >Enter Your Email: <input type="email" name="email" required
+          /></label>
+          <label
+            >Create a New Password:
+            <input
+              type="password"
+              name="password"
+              pattern="[a-z0-5]{8,}"
+              required
+          /></label>
+        </fieldset>
+
+        <fieldset class="flex flex-col text-center m-4">
+          <label
+            ><input type="radio" name="account-type" class="inline" /> Personal
+            Account</label
+          >
+          <label
+            ><input type="radio" name="account-type" class="inline" /> Business
+            Account</label
+          >
+          <label>
+            <input type="checkbox" name="terms" class="inline" required /> I
+            accept the
+            <a href="https://www.freecodecamp.org/news/terms-of-service/"
+              >terms and <span class="hover:underline">conditions</span></a
+            >
+          </label>
+        </fieldset>
+        <fieldset>
+          <label class="flex flex-row m-6"
+            >Upload a profile picture: <input type="file" name="file"
+          /></label>
+          <label class="mb-8"
+            >Input your age (years):
+            <input type="number" name="age" min="13" max="120" />
+          </label>
+          <label class="flex flex-col gap-y-4 mt-4 text-center"
+            >How did you hear about us?
+            <select name="referrer">
+              <option value="">(select one)</option>
+              <option value="1">freeCodeCamp News</option>
+              <option value="2">freeCodeCamp YouTube Channel</option>
+              <option value="3">freeCodeCamp Forum</option>
+              <option value="4">Other</option>
+            </select>
+          </label>
+          <label class="flex text-center flex-col mb-4 mt-4"
+            >Provide a bio:
+            <textarea
+              class="mt-4"
+              name="bio"
+              rows="3"
+              cols="30"
+              placeholder="I like coding on the beach..."
+            ></textarea>
+          </label>
+        </fieldset>
+        <input
+          class="bg-indigo-300 flex flex-row justify-center items center p-4 rounded-xl mx-auto text-xl hover:bg-indigo-100"
+          type="submit"
+          value="Submit"
+        />
+      </form>
+    </div>
+  </body>
+</html>
